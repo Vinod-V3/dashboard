@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: Montserrat, sans-serif;
+}
+
+:root{
+    --primary-color: #8a38f5e6;
+    --secondary-color: #8a38f51a;
+}
+
+.mat-mdc-slide-toggle.mat-accent{
+    --mdc-switch-selected-focus-state-layer-color: var(--primary-color) !important;
+    --mdc-switch-selected-handle-color: var(--primary-color) !important;
+    --mdc-switch-selected-hover-state-layer-color: var(--primary-color) !important;
+    --mdc-switch-selected-pressed-state-layer-color: var(--primary-color) !important;
+    --mdc-switch-selected-focus-handle-color: var(--primary-color) !important;
+    --mdc-switch-selected-hover-handle-color: var(--primary-color) !important;
+    --mdc-switch-selected-pressed-handle-color: var(--primary-color) !important;
+    --mdc-switch-selected-focus-track-color: var(--primary-color) !important;
+    --mdc-switch-selected-hover-track-color: var(--primary-color) !important;
+    --mdc-switch-selected-pressed-track-color: var(--primary-color) !important;
+    --mdc-switch-selected-track-color: var(--primary-color) !important;   
+}
+
+
+
+.marker{
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+.marker-popup{
+  font-size: 12px;
+  color: grey;
+  h1{
+    font-size: 16px;
+    color: black;
+  }
+
+  img{
+    width: 100px;
+    height: 30px;
+  }
+
+  .name-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.connecting-lines{
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

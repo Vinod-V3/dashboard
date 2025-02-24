@@ -1,0 +1,11 @@
+.options-list{
+    border: 2px solid var(--primary-color);
+    background-color: #f0f0f086;
+    padding: 20px;
+    font-size: 30px;
+    min-width: 250px;
+    text-transform: capitalize;
+    mat-slide-toggle{
+        margin-bottom: 12px;
+    }
+}
