@@ -1,0 +1,8 @@
+<svg width="100px" height="100px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer red triangle -->
+  <polygon points="512,128 128,896 896,896" fill="#d11f44"/>
+  <!-- Middle white triangle (cut-out effect) -->
+  <polygon points="512,280 280,840 744,840" fill="#ffffff"/>
+  <!-- Inner red triangle -->
+  <polygon points="512,400 360,800 664,800" fill="#d11f44"/>
+</svg>
