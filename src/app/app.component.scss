@@ -1,7 +1,6 @@
 #map {
     width: 100%;
-    height: 95vh;
-    border-radius: 10px;
+    height: 100vh;
     position: relative;
     opacity: 0;
     transform: translateY(20px);
@@ -16,18 +15,24 @@
 }
 
 .names-list{
-  border: 2px solid;
+  border: 2px solid var(--primary-color);
   position: absolute;
   right: 100px;
-  top: 200px;
+  top: 170px;
   z-index: 9999;
   width: 275px;
-  background-color: #F0F0F0;
+  // background-color: #F0F0F0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
   font-size: 16px;
   min-height: 200px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 0.8s ease-out forwards;
+  border-radius: 15px;
+  padding: 0px 12px;
   li{
     margin-bottom: 14px;
     cursor: pointer;

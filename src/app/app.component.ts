@@ -24,10 +24,10 @@ export class AppComponent {
   private activePartnerLinks: L.Polyline[] = [];
 
   markerConfigList:any = {
-    momentum : { hqIcon: "/assets/marker-icons/hq-circle.svg", icon: "/assets/marker-icons/circle.svg", color: "#572E91" },
-    strategic : { hqIcon: "/assets/marker-icons/hq-square.svg", icon: "/assets/marker-icons/square.svg", color: "orange" },
-    collaborator : { hqIcon: "/assets/marker-icons/hq-triangle.svg", icon: "/assets/marker-icons/triangle.svg", color: "red" },
-    anchor : { hqIcon: "/assets/marker-icons/hq-diamond.svg", icon: "/assets/marker-icons/diamond.svg", color: "pink" }
+    momentum : { hqIcon: "./assets/marker-icons/hq-circle.svg", icon: "./assets/marker-icons/circle.svg", color: "#572E91" },
+    strategic : { hqIcon: "./assets/marker-icons/hq-square.svg", icon: "./assets/marker-icons/square.svg", color: "orange" },
+    collaborator : { hqIcon: "./assets/marker-icons/hq-triangle.svg", icon: "./assets/marker-icons/triangle.svg", color: "red" },
+    anchor : { hqIcon: "./assets/marker-icons/hq-diamond.svg", icon: "./assets/marker-icons/diamond.svg", color: "pink" }
   }
 
 
@@ -107,7 +107,7 @@ export class AppComponent {
       let markerConfig = this.markerConfigList[partner.type]
       const hqMarker = L.marker([partner.hq_location.lat, partner.hq_location.lon], {
         icon: L.icon({
-          iconUrl: markerConfig.hqIcon,
+          iconUrl: markerConfig.icon,
           iconSize: [30, 45],
           className: "marker"
         })
@@ -128,12 +128,12 @@ export class AppComponent {
         marker.addTo(this.map);
         this.activeMarkers[type].push(marker);
   
-        const dottedLine = L.polyline(
-          [[partner.hq_location.lat, partner.hq_location.lon], [loc.lat, loc.lon]], 
-          { color: markerConfig.color, weight: 1, dashArray: "5", opacity: 0.8 , className: "connecting-lines"}
-        ).addTo(this.map);
+        // const dottedLine = L.polyline(
+        //   [[partner.hq_location.lat, partner.hq_location.lon], [loc.lat, loc.lon]], 
+        //   { color: markerConfig.color, weight: 1, dashArray: "5", opacity: 0.8 , className: "connecting-lines"}
+        // ).addTo(this.map);
   
-        this.activeLines[type].push(dottedLine);
+        // this.activeLines[type].push(dottedLine);
       });
     });
   }
@@ -151,9 +151,11 @@ export class AppComponent {
 
   private updateActiveNames(type: string, isAdding: boolean) {
     const selectedPartners = mapData.partners.filter(p => p.type === type);
+    selectedPartners.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
   
     if (isAdding) {
-      this.activePartnerNames.push(...selectedPartners);
+      // this.activePartnerNames.push(...selectedPartners);
+      this.activePartnerNames = selectedPartners;
     } else {
       this.activePartnerNames = this.activePartnerNames.filter((name:any) => !selectedPartners.includes(name));
     }
@@ -164,20 +166,23 @@ export class AppComponent {
     mapData.partner_links.forEach(link => {
       const fromPartner:any = mapData.partners.find(p => p.id === link.from_id);
       const toPartner:any = mapData.partners.find(p => p.id === link.to_id);
+      const toPartnerLocation = toPartner.other_locations[link.to_location_id]
       if (!this.activeList.includes(fromPartner.type) || !this.activeList.includes(toPartner.type)) {
         return;
       }
   
-      if (fromPartner && toPartner) {
+      if (fromPartner && toPartner && toPartnerLocation) {
         const fromHQ:any = [fromPartner.hq_location.lat, fromPartner.hq_location.lon];
-        const toHQ:any = [toPartner.hq_location.lat, toPartner.hq_location.lon];
+        // const toHQ:any = [toPartner.hq_location.lat, toPartner.hq_location.lon];
+        const toHQ:any = [toPartnerLocation.lat, toPartnerLocation.lon];
   
         const curvedLine = L.polyline([fromHQ, toHQ], {
-          color: "green",
+          color: "#ED2388",
           weight: 2,
-          dashArray: "5, 5",
+          dashArray: "5",
           opacity: 0.8,
-          smoothFactor: 1
+          smoothFactor: 1,
+          className: "connecting-lines"
         }).addTo(this.map);
   
         this.activePartnerLinks.push(curvedLine);
@@ -198,7 +203,7 @@ export class AppComponent {
     let htmlContent = `<div class="marker-popup">
       <div class="name-image">
         <h1>${data.name}</h1>
-        <img src="/assets/${data.logo}" alt="logo" />
+        <img src="./assets/${data.logo}" alt="logo" />
       </div>
       <a href="${data.website}" target="_blank">Website</a><br/>
       <p>${data.description}</p>

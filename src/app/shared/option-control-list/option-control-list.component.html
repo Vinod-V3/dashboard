@@ -1,7 +1,9 @@
 @if(optionsList.length){
     <div class="options-list">
         @for(option of optionsList; track $index){
-        <mat-slide-toggle (change)="optionChange($event, option)">{{ option.label }}</mat-slide-toggle><br/>
+          <div class="option">
+            <mat-slide-toggle (change)="optionChange($event, option)"></mat-slide-toggle><div class="option-name">{{ option.label }}</div>
+          </div>
         }
     </div>
 }

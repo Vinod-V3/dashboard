@@ -1,11 +1,26 @@
 .options-list{
     border: 2px solid var(--primary-color);
-    background-color: #f0f0f086;
+    // background-color: #f0f0f086;
+    background-color: black;
     padding: 20px;
-    font-size: 30px;
     min-width: 250px;
     text-transform: capitalize;
-    mat-slide-toggle{
-        margin-bottom: 12px;
+    border-radius: 15px;
+
+    .option{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        padding: 0px 12px;
+    }
+
+    .option:last-child{
+        margin-bottom: 0px;
+    }
+
+    .option-name{
+        margin-left: 18px;
+        color: white;
+        font-size: 18px;
     }
 }
