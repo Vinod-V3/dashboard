@@ -75,7 +75,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://involveedu.com",
       "description": "",
-      "logo": "icons/.png",
+      "logo": "icons/involve.png",
       "hq_location": {"lat": 12.821919897669726, "lon": 77.68753846696109},
       "other_locations": [
         {
@@ -204,7 +204,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://odisharising.in",
       "description": "",
-      "logo": "icons/.png",
+      "logo": "icons/odisharising.png",
       "hq_location": {"lat": 20.340537807372513, "lon": 85.82222636387843},
       "other_locations": [
         {
@@ -299,16 +299,29 @@ export const mapData = {
     },
     {
       "id": 20,
+      "name": "Saajha",
+      "type": "momentum",
+      "website": "https://www.saajha.org",
+      "description": "",
+      "logo": "icons/saajha.webp",
+      "hq_location": {"lat": 28.527885199735568, "lon": 77.29146095381523},
+      "other_locations": [
+        {
+          "lat":  24.791570458181813, "lon": 85.00079088011323}
+      ]
+    },
+    {
+      "id": 21,
       "name": "L & T Technology Services",
       "type": "strategic",
       "website": "https://www.ltts.com",
       "description": "",
       "logo": "icons/ltts.png",
-      "hq_location": {"lat": 22.310647939328263, "lon": 73.18441178858481},
+      "hq_location": {"lat": 12.357519715439638, "lon": 76.59393024936759},
       "other_locations": []
     },
     {
-      "id": 21,
+      "id": 22,
       "name": "Axis Bank",
       "type": "strategic",
       "website": "https://www.axisbank.com",
@@ -318,7 +331,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "Amazon Web Services",
       "type": "strategic",
       "website": "http://aws.amazon.com",
@@ -328,7 +341,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 23,
+      "id": 24,
       "name": "Caring Friends",
       "type": "strategic",
       "website": "",
@@ -338,7 +351,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 24,
+      "id": 25,
       "name": "Rotary Club of Queen's Necklace",
       "type": "strategic",
       "website": "https://www.rotaryqueensnecklace.org",
@@ -348,7 +361,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 25,
+      "id": 26,
       "name": "Centre for Exponential Change",
       "type": "strategic",
       "website": "https://centreforexponentialchange.org",
@@ -358,7 +371,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 26,
+      "id": 27,
       "name": "PayPal",
       "type": "strategic",
       "website": "www.paypal.com",
@@ -368,7 +381,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 27,
+      "id": 28,
       "name": "HDFC Bank",
       "type": "strategic",
       "website": "www.hdfcbank.com",
@@ -378,7 +391,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 28,
+      "id": 29,
       "name": "Amansa Capital",
       "type": "strategic",
       "website": "www.amansacapital.com",
@@ -388,7 +401,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 29,
+      "id": 30,
       "name": "ComMutiny - The Youth Collective",
       "type": "anchor",
       "website": "https://commutiny.in",
@@ -398,7 +411,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 30,
+      "id": 31,
       "name": "Piramal Foundation",
       "type": "anchor",
       "website": "https://www.piramalfoundation.org",
@@ -408,17 +421,27 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 31,
+      "id": 32,
+      "name": "Mantra4Change",
+      "type": "anchor",
+      "website": "https://www.mantra4change.org",
+      "description": "",
+      "logo": "icons/mantra.png",
+      "hq_location": {"lat": 12.906153607589419, "lon": 77.58366692463399},
+      "other_locations": []
+    },
+    {
+      "id": 33,
       "name": "CoLab",
       "type": "collaborator",
       "website": "https://www.colabglobal.org",
       "description": "",
-      "logo": "icons/colap.jpeg",
+      "logo": "icons/colab.jpeg",
       "hq_location": {"lat": 12.90638075881041, "lon": 77.58429312595403},
       "other_locations": []
     },
     {
-      "id": 32,
+      "id": 34,
       "name": "Tekdi",
       "type": "collaborator",
       "website": "www.tekdi.net",
@@ -428,7 +451,7 @@ export const mapData = {
       "other_locations": []
     },
     {
-      "id": 33,
+      "id": 35,
       "name": "Gnothi Seauton",
       "type": "collaborator",
       "website": "https://www.gnothiseauton.co",
@@ -436,12 +459,113 @@ export const mapData = {
       "logo": "icons/gnothi.png",
       "hq_location": {"lat": 28.63163181070956, "lon": 77.10003448810583},
       "other_locations": []
+    },
+    {
+      "id": 36,
+      "name": "GritWorks",
+      "type": "collaborator",
+      "website": "https://www.gritworks.ai",
+      "description": "",
+      "logo": "icons/gritworks.png",
+      "hq_location": {"lat": 12.906153607589419, "lon": 77.58366692463399},
+      "other_locations": []
     }
   ],
   "partner_links": [
     {
-      "from_id": 10,
-      "to_id": 25,
+      "from_id": 27,
+      "to_id": 2,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 22,
+      "to_id": 3,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 24,
+      "to_id": 3,
+      "to_location_id": 1,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 21,
+      "to_id": 9,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 27,
+      "to_id": 10,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 28,
+      "to_id": 10,
+      "to_location_id": 6,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 28,
+      "to_id": 10,
+      "to_location_id": 7,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 28,
+      "to_id": 11,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 28,
+      "to_id": 11,
+      "to_location_id": 1,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 22,
+      "to_id": 13,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 22,
+      "to_id": 14,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 22,
+      "to_id": 14,
+      "to_location_id": 1,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 22,
+      "to_id": 17,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 24,
+      "to_id": 19,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 27,
+      "to_id": 19,
+      "to_location_id": 1,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 27,
+      "to_id": 19,
+      "to_location_id": 2,
       "type": "strategic_to_momentum"
     }
   ]
