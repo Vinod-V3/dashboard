@@ -448,7 +448,7 @@ export const mapData = {
       "description": "",
       "logo": "icons/tekdi.png",
       "hq_location": {"lat": 18.50827391749005, "lon": 73.78919383398078},
-      "other_locations": [{"lat": 18.50827391749005, "lon": 73.78919383398078}]
+      "other_locations": []
     },
     {
       "id": 35,
@@ -567,12 +567,6 @@ export const mapData = {
       "to_id": 19,
       "to_location_id": 2,
       "type": "strategic_to_momentum"
-    },
-    {
-      "from_id": 30,
-      "to_id": 34,
-      "to_location_id": 0,
-      "type": "strategic_to_momentum"
-    },
+    }
   ]
 }
