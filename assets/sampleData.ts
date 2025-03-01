@@ -6,7 +6,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://www.alohomora.org",
       "description": "Enable structured career exploration and informed choice for young people in govt schools in India at scale! By partnering with governments and credible NGOs, creating contextualized content, and building the capacity of teachers to facilitate our program.",
-      "logo": "icons/alohomora.png",
+      "logo": "icons/alohomora.svg",
       "hq_location": {"lat": 28.557103229473636, "lon": 77.20515453847237},
       "other_locations": [
         {
@@ -20,7 +20,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://www.bharatdekho.org",
       "description": "Bharat Dekho empowers children by enhancing their learning and well-being abilities by establishing a community learning center. We also educate parents on nutrition through awareness sessions within the community. Our initiative is powered by a locally trained community volunteer who delivers an engaging weekly program.",
-      "logo": "icons/bharatdekho.png",
+      "logo": "icons/bharatdekho.svg",
       "hq_location": {"lat": 17.392089807699104, "lon": 78.42968168786203},
       "other_locations": [
         {
@@ -34,7 +34,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://eduweavefoundation.org",
       "description": "EduWeave Foundation works towards providing equitable quality education to children during foundational years.",
-      "logo": "icons/eduweave.png",
+      "logo": "icons/eduweave.svg",
       "hq_location": {"lat": 13.082641645752519, "lon": 77.59866562463621},
       "other_locations": [
         {
@@ -51,7 +51,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://www.happyhorizons.org",
       "description": "",
-      "logo": "icons/happyhorizon.png",
+      "logo": "icons/happyhorizon.svg",
       "hq_location": {"lat": 12.844111609764353, "lon": 77.67699591522069},
       "other_locations": [
         {
@@ -65,7 +65,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://www.ifet.org.in",
       "description": "",
-      "logo": "icons/ifet.png",
+      "logo": "icons/ifet.svg",
       "hq_location": {"lat": 27.53617051097223, "lon": 96.09721069611265},
       "other_locations": []
     },
@@ -75,7 +75,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://involveedu.com",
       "description": "",
-      "logo": "icons/involve.png",
+      "logo": "icons/involve.svg",
       "hq_location": {"lat": 12.821919897669726, "lon": 77.68753846696109},
       "other_locations": [
         {
@@ -104,7 +104,7 @@ export const mapData = {
       "type": "momentum",
       "website": "",
       "description": "",
-      "logo": "icons/jms.png",
+      "logo": "icons/jms.svg",
       "hq_location": {"lat": 26.12044479641395, "lon": 85.3911424184815},
       "other_locations": []
     },
@@ -114,7 +114,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://karunodaya.in",
       "description": "",
-      "logo": "icons/karunodaya.png",
+      "logo": "icons/karunodaya.svg",
       "hq_location": {"lat": 24.79074998057475, "lon": 85.00754598254147},
       "other_locations": []
     },
@@ -124,7 +124,7 @@ export const mapData = {
       "type": "momentum",
       "website": "http://www.makkalajagriti.org/",
       "description": "",
-      "logo": "icons/mj.png",
+      "logo": "icons/mj.svg",
       "hq_location": {"lat": 13.009421010064898, "lon": 77.56820588230714},
       "other_locations": [
         {
@@ -138,7 +138,7 @@ export const mapData = {
       "type": "momentum",
       "website": "http://www.mantra4change.org/",
       "description": "",
-      "logo": "icons/mantra.png",
+      "logo": "icons/mantra.svg",
       "hq_location": {"lat": 12.906153607589419, "lon": 77.58366692463399},
       "other_locations": [
         {
@@ -173,7 +173,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://www.nagaed.com",
       "description": "",
-      "logo": "icons/nagaed.png",
+      "logo": "icons/nagaed.svg",
       "hq_location": {"lat": 25.69916592804373, "lon": 94.10607452675136},
       "other_locations": [
         {
@@ -204,7 +204,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://odisharising.in",
       "description": "",
-      "logo": "icons/odisharising.png",
+      "logo": "icons/orf.svg",
       "hq_location": {"lat": 20.340537807372513, "lon": 85.82222636387843},
       "other_locations": [
         {
@@ -218,7 +218,7 @@ export const mapData = {
       "type": "momentum",
       "website": "http://www.prajayatna.in/",
       "description": "",
-      "logo": "icons/prajayatna.png",
+      "logo": "icons/prajayatna.svg",
       "hq_location": {"lat": 12.928585081475964, "lon": 77.57643893204043},
       "other_locations": [
         {
@@ -249,7 +249,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://shikshalokam.org/",
       "description": "",
-      "logo": "icons/sl.png",
+      "logo": "icons/sl.svg",
       "hq_location": {"lat": 12.90638075881041, "lon": 77.58429312595403},
       "other_locations": [
         {
@@ -263,7 +263,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://shiksharth.in",
       "description": "",
-      "logo": "icons/shiksharth.png",
+      "logo": "icons/shiksharth.svg",
       "hq_location": {"lat": 18.93079491207973, "lon": 82.91973223981321},
       "other_locations": []
     },
@@ -273,7 +273,7 @@ export const mapData = {
       "type": "momentum",
       "website": "",
       "description": "",
-      "logo": "",
+      "logo": "icons/sms.svg",
       "hq_location": {"lat": 26.515352248842575, "lon": 85.2943309671421},
       "other_locations": []
     },
@@ -283,7 +283,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://vidhyavidhai.org",
       "description": "",
-      "logo": "icons/vv.png",
+      "logo": "icons/vv.svg",
       "hq_location": {"lat": 12.942199162841488, "lon": 80.18172650875918},
       "other_locations": [
         {
@@ -303,7 +303,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://www.saajha.org",
       "description": "",
-      "logo": "icons/saajha.webp",
+      "logo": "icons/saajha.svg",
       "hq_location": {"lat": 28.527885199735568, "lon": 77.29146095381523},
       "other_locations": [
         {
@@ -316,7 +316,7 @@ export const mapData = {
       "type": "strategic",
       "website": "https://www.ltts.com",
       "description": "",
-      "logo": "icons/ltts.png",
+      "logo": "icons/ltts.svg",
       "hq_location": {"lat": 12.357519715439638, "lon": 76.59393024936759},
       "other_locations": []
     },
@@ -326,7 +326,7 @@ export const mapData = {
       "type": "strategic",
       "website": "https://www.axisbank.com",
       "description": "",
-      "logo": "icons/axisbank.png",
+      "logo": "icons/axisbank.svg",
       "hq_location": {"lat": 19.00755549630454, "lon": 72.8289339597975},
       "other_locations": []
     },
@@ -346,7 +346,7 @@ export const mapData = {
       "type": "strategic",
       "website": "",
       "description": "",
-      "logo": "icons/.png",
+      "logo": "icons/cf.svg",
       "hq_location": {"lat": 19.097003051148906, "lon": 74.74610243935415},
       "other_locations": []
     },
@@ -356,7 +356,7 @@ export const mapData = {
       "type": "strategic",
       "website": "https://www.rotaryqueensnecklace.org",
       "description": "",
-      "logo": "icons/rotary.png",
+      "logo": "icons/rotary.svg",
       "hq_location": {"lat": 18.930369713387197, "lon": 72.82192848808987},
       "other_locations": []
     },
@@ -376,7 +376,7 @@ export const mapData = {
       "type": "strategic",
       "website": "www.paypal.com",
       "description": "",
-      "logo": "icons/paypal.png",
+      "logo": "icons/paypal.svg",
       "hq_location": {"lat": 12.908439551324125, "lon": 80.22916785979533},
       "other_locations": []
     },
@@ -396,7 +396,7 @@ export const mapData = {
       "type": "strategic",
       "website": "www.amansacapital.com",
       "description": "",
-      "logo": "icons/amansa.png",
+      "logo": "icons/amansa.svg",
       "hq_location": {"lat": 19.098415265888022, "lon": 72.8478497344108},
       "other_locations": []
     },
@@ -406,7 +406,7 @@ export const mapData = {
       "type": "anchor",
       "website": "https://commutiny.in",
       "description": "",
-      "logo": "icons/commutiny.png",
+      "logo": "icons/commutiny.svg",
       "hq_location": {"lat": 28.541445937857354, "lon": 77.26219946243447},
       "other_locations": []
     },
@@ -416,7 +416,7 @@ export const mapData = {
       "type": "anchor",
       "website": "https://www.piramalfoundation.org",
       "description": "",
-      "logo": "icons/piramal.png",
+      "logo": "icons/piramal.svg",
       "hq_location": {"lat": 19.085891380809564, "lon": 72.88729262790613},
       "other_locations": []
     },
@@ -426,7 +426,7 @@ export const mapData = {
       "type": "anchor",
       "website": "https://www.mantra4change.org",
       "description": "",
-      "logo": "icons/mantra.png",
+      "logo": "icons/mantra.svg",
       "hq_location": {"lat": 12.906153607589419, "lon": 77.58366692463399},
       "other_locations": []
     },
@@ -436,7 +436,7 @@ export const mapData = {
       "type": "collaborator",
       "website": "https://www.colabglobal.org",
       "description": "",
-      "logo": "icons/colab.jpeg",
+      "logo": "icons/colab.svg",
       "hq_location": {"lat": 12.90638075881041, "lon": 77.58429312595403},
       "other_locations": []
     },
@@ -446,7 +446,7 @@ export const mapData = {
       "type": "collaborator",
       "website": "www.tekdi.net",
       "description": "",
-      "logo": "icons/tekdi.png",
+      "logo": "icons/tekdi.svg",
       "hq_location": {"lat": 18.50827391749005, "lon": 73.78919383398078},
       "other_locations": []
     },
@@ -456,7 +456,7 @@ export const mapData = {
       "type": "collaborator",
       "website": "https://www.gnothiseauton.co",
       "description": "",
-      "logo": "icons/gnothi.png",
+      "logo": "icons/gnothi.svg",
       "hq_location": {"lat": 28.63163181070956, "lon": 77.10003448810583},
       "other_locations": []
     },
@@ -466,7 +466,7 @@ export const mapData = {
       "type": "collaborator",
       "website": "https://www.gritworks.ai",
       "description": "",
-      "logo": "icons/gritworks.png",
+      "logo": "icons/gritworks.svg",
       "hq_location": {"lat": 12.906153607589419, "lon": 77.58366692463399},
       "other_locations": []
     }
