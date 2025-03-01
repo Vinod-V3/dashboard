@@ -190,7 +190,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://www.neaid.org",
       "description": "",
-      "logo": "icons/neaid.jpeg",
+      "logo": "icons/neaid.svg",
       "hq_location": {"lat": 26.171139980763527, "lon": 91.78018680787882},
       "other_locations": [
         {
@@ -235,7 +235,7 @@ export const mapData = {
       "type": "momentum",
       "website": "https://www.sanjhisikhiya.org",
       "description": "",
-      "logo": "icons/ss.jpeg",
+      "logo": "icons/ss.svg",
       "hq_location": {"lat": 30.624770220029436, "lon": 76.38662887848525},
       "other_locations": [
         {
@@ -336,7 +336,7 @@ export const mapData = {
       "type": "strategic",
       "website": "http://aws.amazon.com",
       "description": "",
-      "logo": "icons/aws.jpeg",
+      "logo": "icons/aws.svg",
       "hq_location": {"lat": 28.55084200359278, "lon": 77.2505352538159},
       "other_locations": []
     },
@@ -366,7 +366,7 @@ export const mapData = {
       "type": "strategic",
       "website": "https://centreforexponentialchange.org",
       "description": "",
-      "logo": "icons/c4ec.jpeg",
+      "logo": "icons/c4ec.svg",
       "hq_location": {"lat": 12.931281138592352, "lon": 77.62426479156386},
       "other_locations": []
     },
@@ -386,7 +386,7 @@ export const mapData = {
       "type": "strategic",
       "website": "www.hdfcbank.com",
       "description": "",
-      "logo": "icons/hdfc.jpeg",
+      "logo": "icons/hdfc.svg",
       "hq_location": {"lat": 18.929368911500116, "lon": 72.82618474933291},
       "other_locations": []
     },
