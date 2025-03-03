@@ -7,7 +7,7 @@ export const mapData = {
       "website": "https://www.alohomora.org",
       "description": "Enable structured career exploration and informed choice for young people in govt schools in India at scale! By partnering with governments and credible NGOs, creating contextualized content, and building the capacity of teachers to facilitate our program.",
       "logo": "icons/alohomora.svg",
-      "hq_location": {"lat": 28.557103229473636, "lon": 77.20515453847237},
+      "hq_location": {"lat": 28.057103229473636, "lon": 77.00515453847237},
       "other_locations": [
         {
           "lat": 28.607119946716207, "lon": 76.65707816342436
@@ -61,7 +61,7 @@ export const mapData = {
     },
     {
       "id": 5,
-      "name": "India Foundation For Educational Transformation",
+      "name": "IFET",
       "type": "momentum",
       "website": "https://www.ifet.org.in",
       "description": "",
@@ -76,7 +76,8 @@ export const mapData = {
       "website": "https://involveedu.com",
       "description": "",
       "logo": "icons/involve.svg",
-      "hq_location": {"lat": 12.821919897669726, "lon": 77.68753846696109},
+      "hq_location": {"lat": 12.738263728196413, "lon": 77.50003487120902},
+
       "other_locations": [
         {
           "lat": 28.590120261815724, "lon": 78.57311990241082
@@ -125,7 +126,7 @@ export const mapData = {
       "website": "http://www.makkalajagriti.org/",
       "description": "",
       "logo": "icons/mj.svg",
-      "hq_location": {"lat": 13.009421010064898, "lon": 77.56820588230714},
+      "hq_location": {"lat": 13.009421010064898, "lon": 77.36820588230714},
       "other_locations": [
         {
           "lat": 12.299564045230927, "lon": 76.64426856460032
@@ -139,7 +140,7 @@ export const mapData = {
       "website": "http://www.mantra4change.org/",
       "description": "",
       "logo": "icons/mantra.svg",
-      "hq_location": {"lat": 12.906153607589419, "lon": 77.58366692463399},
+      "hq_location": {"lat": 12.906153607589419, "lon": 77.88366692463399},
       "other_locations": [
         {
           "lat": 13.176774757709865, "lon": 77.57852932448061
@@ -157,7 +158,7 @@ export const mapData = {
           "lat": 16.21627254830264, "lon": 77.35698840976873
         },
         {
-          "lat": 12.877512570435915, "lon": 77.59621624080263
+          "lat": 12.807512570435915, "lon": 77.89621624080263
         },
         {
           "lat": 25.3369639865156, "lon": 91.76829641916132
@@ -186,7 +187,7 @@ export const mapData = {
     },
     {
       "id": 12,
-      "name": "Northeast Center for Equity on Integrated Development",
+      "name": "NEAID",
       "type": "momentum",
       "website": "https://www.neaid.org",
       "description": "",
@@ -250,7 +251,7 @@ export const mapData = {
       "website": "https://shikshalokam.org/",
       "description": "",
       "logo": "icons/sl.svg",
-      "hq_location": {"lat": 12.90638075881041, "lon": 77.58429312595403},
+      "hq_location": {"lat": 13.10638075881041, "lon": 77.28429312595403},
       "other_locations": [
         {
           "lat": 26.121831955385186, "lon": 85.39165740260628
@@ -304,7 +305,7 @@ export const mapData = {
       "website": "https://www.saajha.org",
       "description": "",
       "logo": "icons/saajha.svg",
-      "hq_location": {"lat": 28.527885199735568, "lon": 77.29146095381523},
+      "hq_location": {"lat": 29.027885199735568, "lon": 77.29146095381523},
       "other_locations": [
         {
           "lat":  24.791570458181813, "lon": 85.00079088011323}
@@ -312,7 +313,7 @@ export const mapData = {
     },
     {
       "id": 21,
-      "name": "L & T Technology Services",
+      "name": "L&T Technology Services",
       "type": "strategic",
       "website": "https://www.ltts.com",
       "description": "",
@@ -337,7 +338,7 @@ export const mapData = {
       "website": "http://aws.amazon.com",
       "description": "",
       "logo": "icons/aws.svg",
-      "hq_location": {"lat": 28.55084200359278, "lon": 77.2505352538159},
+      "hq_location": {"lat": 27.55084200359278, "lon": 77.2505352538159},
       "other_locations": []
     },
     {
@@ -367,7 +368,7 @@ export const mapData = {
       "website": "https://centreforexponentialchange.org",
       "description": "",
       "logo": "icons/c4ec.svg",
-      "hq_location": {"lat": 12.931281138592352, "lon": 77.62426479156386},
+      "hq_location": {"lat": 13.031281138592352, "lon": 77.82426479156386},
       "other_locations": []
     },
     {
@@ -387,7 +388,7 @@ export const mapData = {
       "website": "www.hdfcbank.com",
       "description": "",
       "logo": "icons/hdfc.svg",
-      "hq_location": {"lat": 18.929368911500116, "lon": 72.82618474933291},
+      "hq_location": {"lat": 18.929368911500116, "lon": 73.22618474933291},
       "other_locations": []
     },
     {
@@ -397,37 +398,27 @@ export const mapData = {
       "website": "www.amansacapital.com",
       "description": "",
       "logo": "icons/amansa.svg",
-      "hq_location": {"lat": 19.098415265888022, "lon": 72.8478497344108},
+      "hq_location": {"lat": 19.598415265888022, "lon": 72.8478497344108},
       "other_locations": []
     },
     {
       "id": 30,
-      "name": "ComMutiny - The Youth Collective",
-      "type": "anchor",
+      "name": "ComMutiny",
+      "type": "momentum",
       "website": "https://commutiny.in",
       "description": "",
       "logo": "icons/commutiny.svg",
-      "hq_location": {"lat": 28.541445937857354, "lon": 77.26219946243447},
+      "hq_location": {"lat": 28.841445937857354, "lon": 77.26219946243447},
       "other_locations": []
     },
     {
       "id": 31,
       "name": "Piramal Foundation",
-      "type": "anchor",
+      "type": "momentum",
       "website": "https://www.piramalfoundation.org",
       "description": "",
       "logo": "icons/piramal.svg",
       "hq_location": {"lat": 19.085891380809564, "lon": 72.88729262790613},
-      "other_locations": []
-    },
-    {
-      "id": 32,
-      "name": "Mantra4Change",
-      "type": "anchor",
-      "website": "https://www.mantra4change.org",
-      "description": "",
-      "logo": "icons/mantra.svg",
-      "hq_location": {"lat": 12.906153607589419, "lon": 77.58366692463399},
       "other_locations": []
     },
     {
@@ -437,7 +428,7 @@ export const mapData = {
       "website": "https://www.colabglobal.org",
       "description": "",
       "logo": "icons/colab.svg",
-      "hq_location": {"lat": 12.90638075881041, "lon": 77.58429312595403},
+      "hq_location": {"lat": 12.90638075881041, "lon": 77.18429312595403},
       "other_locations": []
     },
     {
@@ -447,7 +438,7 @@ export const mapData = {
       "website": "www.tekdi.net",
       "description": "",
       "logo": "icons/tekdi.svg",
-      "hq_location": {"lat": 18.50827391749005, "lon": 73.78919383398078},
+      "hq_location": {"lat": 18.30827391749005, "lon": 73.98919383398078},
       "other_locations": []
     },
     {
@@ -457,7 +448,7 @@ export const mapData = {
       "website": "https://www.gnothiseauton.co",
       "description": "",
       "logo": "icons/gnothi.svg",
-      "hq_location": {"lat": 28.63163181070956, "lon": 77.10003448810583},
+      "hq_location": {"lat": 28.93163181070956, "lon": 77.00003448810583},
       "other_locations": []
     },
     {
@@ -467,7 +458,7 @@ export const mapData = {
       "website": "https://www.gritworks.ai",
       "description": "",
       "logo": "icons/gritworks.svg",
-      "hq_location": {"lat": 12.906153607589419, "lon": 77.58366692463399},
+      "hq_location": {"lat": 12.406153607589419, "lon": 77.08366692463399},
       "other_locations": []
     }
   ],
