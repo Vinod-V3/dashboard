@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { mapData } from '../assets/sampleData';
+import { mapData } from '../../assets/sampleData';
 import * as L from 'leaflet';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  selector: 'app-animated-map',
+  templateUrl: './animated-map.component.html',
+  styleUrl: './animated-map.component.scss'
 })
-export class AppComponent {
+export class AnimatedMapComponent {
   private map!: L.Map;
   optionsList:any = []
   mainMarkerData:any = {}
@@ -25,10 +26,10 @@ export class AppComponent {
   private activePartnerLinks: { [key: string]: L.Polyline[] } = {};
 
   markerConfigList:any = {
-    momentum : { hqIcon: "./assets/marker-icons/hq-circle.svg", icon: "./assets/marker-icons/circle.svg", color: "#572E91" },
-    strategic : { hqIcon: "./assets/marker-icons/hq-square.svg", icon: "./assets/marker-icons/square.svg", color: "orange" },
-    collaborator : { hqIcon: "./assets/marker-icons/hq-triangle.svg", icon: "./assets/marker-icons/triangle.svg", color: "red" },
-    anchor : { hqIcon: "./assets/marker-icons/hq-diamond.svg", icon: "./assets/marker-icons/diamond.svg", color: "pink" }
+    momentum : { hqIcon: "./assets/marker-icons/hq-circle.svg", icon: "./assets/marker-icons/circle.svg", color: "#572E91", priority: 1000 },
+    strategic : { hqIcon: "./assets/marker-icons/hq-square.svg", icon: "./assets/marker-icons/square.svg", color: "orange", priority: 2000 },
+    collaborator : { hqIcon: "./assets/marker-icons/hq-triangle.svg", icon: "./assets/marker-icons/triangle.svg", color: "red", priority: 4000 },
+    anchor : { hqIcon: "./assets/marker-icons/hq-diamond.svg", icon: "./assets/marker-icons/diamond.svg", color: "pink", priority: 3000 }
   }
 
   currentImage:any = ""
@@ -41,8 +42,17 @@ export class AppComponent {
   selectedType = ""
   idsList:any = []
 
-  constructor() {
-    this.optionsList = [...new Set(mapData.partners.map(p => p.type))]
+  mapZoom:any = localStorage.getItem('zoom') || 5
+  mapData:any = {}
+
+  constructor(private router: Router) {
+    let data = localStorage.getItem("mapData")
+    this.mapData = data ? JSON.parse(data) : mapData
+
+    if(!this.mapData && !this.mapData.partners){
+      return
+    }
+    this.optionsList = [...new Set(this.mapData.partners.map((p:any) => p.type))]
 
     this.optionsList = this.optionsList.map((data: any) => {
       return { label: this.optionLabels[data], type: data }
@@ -56,12 +66,11 @@ export class AppComponent {
     //   this.currentImage = mapData.partners[this.currentIndex].logo;
     //   this.addMarkers()
     // }, 10000);
-    return
+    // return
     this.initMap();
   }
 
   nextImage() {
-    // console.log('NEct called',this.isExiting, this.isAnimating)
     let type = this.selectedType
     if (this.isExiting) return; // Prevent multiple clicks
     if (!this.isAnimating || this.currentIndex >= this.selectedPartners.length - 1) {
@@ -97,17 +106,25 @@ export class AppComponent {
   }
 
   private async initMap() {
-    this.map = L.map('map', {
+    this.map = L.map('mapOne', {
       center: [22.5937, 78.9629],
       zoom: 5,
+      maxBounds: [
+        [5.5, 88.0],  // Southwest India
+        [38.5, 97.5]  // Northeast India
+      ],
+      maxBoundsViscosity: 1.0, // Prevents dragging outside bounds
+      zoomControl: false
     });
   
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
+    L.tileLayer('',
+    // L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
       {
         attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
         subdomains: 'abc',
-        maxZoom: 20,
-        opacity:1
+        maxZoom: this.mapZoom,
+        opacity:1,
+        minZoom: this.mapZoom
       }
     ).addTo(this.map);
     
@@ -130,13 +147,14 @@ export class AppComponent {
             fillOpacity: 1,
           })
         }).addTo(this.map);
+        this.map.fitBounds(L.geoJSON(data).getBounds());
       });
   }
 
   optionToggle($event:any){
     this.selectedType = $event.selectedOption
     let type = $event.selectedOption
-    this.selectedPartners = mapData.partners.filter((p:any) => p.type === type);
+    this.selectedPartners = this.mapData.partners.filter((p:any) => p.type === type).sort((a:any, b:any) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
     if ($event.isChecked) {
       this.currentIndex = -1;
       this.isAnimating = true;
@@ -154,11 +172,8 @@ export class AppComponent {
       this.currentIndex = -1
       this.isAnimating = false
       this.showImage = false
-      let currentOption = mapData.partners.filter((p:any) => p.type === type).map(data => data.id);
-      // console.log("currentOp: ",currentOption)
-      // console.log('Ids list before: ',this.idsList)
+      let currentOption = this.mapData.partners.filter((p:any) => p.type === type).map((data: any) => data.id);
       this.idsList = this.idsList.filter((id:any) => !currentOption.includes(id.id))
-      // console.log('Ids list after: ',this.idsList)
       this.removeMarkersForType(type);
       this.activeList = this.activeList.filter((data: any) => data != type)
       this.updateActiveNames(type, false);
@@ -167,9 +182,7 @@ export class AppComponent {
   }
 
   private showMarkersForType(type: string, data:any): void {
-    // console.log('Sjh0w mar called')
-    const selectedPartners = mapData.partners.filter((p:any) => p.type === type)
-    // console.log('Selected partner: ',selectedPartners, type)
+    const selectedPartners = this.mapData.partners.filter((p:any) => p.type === type)
     // this.activeMarkers[type] = [];
     // this.activeLines[type] = [];
     // this.activeMarkers[type].length ? this.activeMarkers[type] : []
@@ -177,6 +190,7 @@ export class AppComponent {
       this.activeMarkers[type] = []
     }
     let markerConfig = this.markerConfigList[type]
+    const zIndexOffset = markerConfig.priority || 0;
     // const hqMarker = L.marker([data.hq_location.lat, data.hq_location.lon], {
     //   icon: L.icon({
     //     iconUrl: markerConfig.icon,
@@ -192,12 +206,12 @@ export class AppComponent {
         iconSize: [30, 45],
         className: "marker-div"
       })
-    }).bindPopup(this.generatePopupContents(data),{closeButton:false});
+    }).setZIndexOffset(zIndexOffset).bindPopup(this.generatePopupContents(data),{closeButton:false});
 
     hqMarker.addTo(this.map);
-    this.idsList.push({id: data.id, connectionShown: false})
+    this.idsList.push({id: data.id, connectionShown: false, ...data})
     this.activeMarkers[type].push(hqMarker);
-// return
+
     data.other_locations.forEach((loc:any) => {
       const marker = L.marker([loc.lat, loc.lon], {
         // icon: L.icon({
@@ -212,14 +226,12 @@ export class AppComponent {
           iconSize: [30, 45],
           className: "marker-div"
         })
-      }).bindPopup(this.generatePopupContents(data),{closeButton:false});
+      }).setZIndexOffset(zIndexOffset).bindPopup(this.generatePopupContents(data),{closeButton:false});
 
       marker.addTo(this.map);
       this.activeMarkers[type].push(marker);
     });
 
-    // console.log("Active MArkers List: ",this.activeMarkers)
-    // console.log("Active MArkers List INDI: ",this.activeMarkers[type][0])
     this.showPartnerLinks()
     return
   
@@ -259,22 +271,19 @@ export class AppComponent {
   }
 
   private removeMarkersForType(type: string): void {
-    // console.log('Remove markers: ',type, this.activeMarkers, )
-    // console.log('Rem act part: ',this.activePartnerLinks)
     if (this.activeMarkers[type]) {
       this.activeMarkers[type].forEach(marker => this.map.removeLayer(marker));
       delete this.activeMarkers[type];
     }
     if (this.activePartnerLinks[type]) {
-      // console.log('Yed')
       this.activePartnerLinks[type].forEach(line => this.map.removeLayer(line));
       delete this.activePartnerLinks[type];
     }
   }
 
   private updateActiveNames(type: string, isAdding: boolean) {
-    const selectedPartners = mapData.partners.filter(p => p.type === type);
-    selectedPartners.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+    const selectedPartners = this.mapData.partners.filter((p:any) => p.type === type);
+    selectedPartners.sort((a:any, b:any) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
   
     if (isAdding) {
       // this.activePartnerNames.push(...selectedPartners);
@@ -285,30 +294,23 @@ export class AppComponent {
   }
   
   private showPartnerLinks(): void {
-    // console.log('Idslist: ',this.idsList)
     // this.removePartnerLinks()
-    mapData.partner_links.forEach(link => {
-      // console.log("Link d: ",link)
-      const fromPartner:any = mapData.partners.find(p => p.id === link.from_id);
-      const toPartner:any = mapData.partners.find(p => p.id === link.to_id);
+    this.mapData.partner_links.forEach((link: any) => {
+      const fromPartner:any = this.mapData.partners.find((p:any) => p.id === link.from_id);
+      const toPartner:any = this.mapData.partners.find((p:any) => p.id === link.to_id);
       const toPartnerLocation = toPartner.other_locations[link.to_location_id]
 
       let fromPartnerId = this.idsList.find((data:any) => data.id == fromPartner.id)
       let toPartnerId = this.idsList.find((data:any) => data.id == toPartner.id)
-      // console.log('Id;s(MODIFIED):',fromPartnerId, toPartnerId)
       if (!this.activeList.includes(fromPartner.type) || !this.activeList.includes(toPartner.type)) {
         return;
       }
-
-      // console.log('From id: ',link.from_id)
-      // console.log('To id: ',link.to_id)
-      // console.log('From and to ids: ', link.from_id,link.to_id)
 
       if(!fromPartnerId || !toPartnerId){
         return
       }
 
-      if(fromPartnerId.connectionShown && toPartnerId.connectionShown){
+      if(fromPartnerId.connectionShown && toPartnerId.connectionShown && toPartnerLocation.connectionShown){
         return
       }
 
@@ -317,13 +319,27 @@ export class AppComponent {
       // }
   
       if (fromPartner && toPartner && toPartnerLocation) {
-        // console.log('Adding line')
+        // this.idsList = this.idsList.map((data:any) => {
+        //   return ((data.id == fromPartner.id ) || (data.id == toPartner.id))? { ...data, connectionShown: true } : data
+        // })
+
         this.idsList = this.idsList.map((data:any) => {
-          return ((data.id == fromPartner.id ) || (data.id == toPartner.id))? { ...data, connectionShown: true } : data
+          return (data.id == fromPartner.id )? { ...data, connectionShown: true } : data
+        })
+        this.idsList = this.idsList.map((data:any) => {
+          let otherLocationUpdate = data.other_locations
+          if((data.id == toPartner.id) && otherLocationUpdate[link.to_location_id]){
+            otherLocationUpdate[link.to_location_id].connectionShown = true
+          }
+          // otherLocationUpdate[link.to_location_id] = {...otherLocationUpdate[link.to_location_id], connectionShown: true}
+          // otherLocationUpdate[link.to_location_id].connectionShown = true
+          return (data.id == toPartner.id)? { ...data, connectionShown: true, other_locations: otherLocationUpdate } : data
         })
         const fromHQ:any = [fromPartner.hq_location.lat, fromPartner.hq_location.lon];
         // const toHQ:any = [toPartner.hq_location.lat, toPartner.hq_location.lon];
         const toHQ:any = [toPartnerLocation.lat, toPartnerLocation.lon];
+
+        const midpoint = this.getBezierCurvePoints(fromPartner.hq_location, toPartnerLocation, 0.3, 30);
 
         const svgDefs = `
           <svg width="0" height="0">
@@ -339,7 +355,8 @@ export class AppComponent {
       // Append the gradient to the map container
       document.body.insertAdjacentHTML("beforeend", svgDefs);
   
-        const curvedLine = L.polyline([fromHQ, toHQ], {
+        const curvedLine = (L as any).polyline(midpoint, {
+        // const curvedLine = L.polyline([fromHQ, toHQ], {
           // color: "#ED2388",
           color: "url(#gradient)",
           weight: 10,
@@ -356,6 +373,40 @@ export class AppComponent {
       }
     });
   }
+
+  getBezierCurvePoints(latlng1:any, latlng2:any, curvature = 0.3, numPoints = 20) {
+    const lat1 = latlng1.lat, lng1 = latlng1.lon;
+    const lat2 = latlng2.lat, lng2 = latlng2.lon;
+  
+    const latMid = (lat1 + lat2) / 2;
+    const lngMid = (lng1 + lng2) / 2;
+  
+    const dx = lat2 - lat1;
+    const dy = lng2 - lng1;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const angle = Math.atan2(dy, dx) - Math.PI / 2;
+  
+    const controlLat = latMid + curvature * dist * Math.sin(angle);
+    const controlLng = lngMid + curvature * dist * Math.cos(angle);
+    const controlPoint = [controlLat, controlLng];
+  
+    const curvePoints = [];
+    for (let t = 0; t <= 1; t += 1 / numPoints) {
+      const lat =
+        (1 - t) * (1 - t) * lat1 +
+        2 * (1 - t) * t * controlPoint[0] +
+        t * t * lat2;
+  
+      const lng =
+        (1 - t) * (1 - t) * lng1 +
+        2 * (1 - t) * t * controlPoint[1] +
+        t * t * lng2;
+  
+      curvePoints.push([lat, lng]);
+    }
+  
+    return curvePoints;
+  }
   
   private removePartnerLinks(): void {
     // this.activePartnerLinks.forEach(line => this.map.removeLayer(line));
@@ -370,11 +421,13 @@ export class AppComponent {
     let htmlContent = `<div class="marker-popup">
       <div class="name-image">
         <h1>${data.name}</h1>
-        <img src="./assets/${data.logo}" alt="logo" />
+        <div class="image-div">
+          <img src="./assets/${data.logo}" alt="logo" />
+        </div>
       </div>
       <a href="${data.website}" target="_blank">Website</a><br/>
       <p>${data.description}</p>
-    </div>`
+      </div>`
 
     return htmlContent
   }
@@ -397,5 +450,13 @@ export class AppComponent {
         </path>
       </g>
     </svg>`
+  }
+
+  nextPage(){
+    this.router.navigate(["no-animation"])
+  }
+
+  navigateToAdmin(){
+    this.router.navigate(['admin'])
   }
 }

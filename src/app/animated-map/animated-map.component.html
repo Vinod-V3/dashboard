@@ -1,9 +1,8 @@
-<!-- <div id="map"></div> -->
-<!-- <img src="./assets/images/sg_logo_white.svg" alt="logo" class="logo"/> -->
-<!-- <img src="./assets/images/shikshagraha-logo.png" alt="logo" class="logo"/>
+<div id="mapOne"></div>
+<img src="./assets/images/shikshagraha-logo.png" alt="logo" class="logo" (click)="navigateToAdmin()"/>
 <div class="options-card">
   <app-option-control-list [optionsList]="optionsList" (onOptionChange)="optionToggle($event)"></app-option-control-list>
-</div> -->
+</div>
 
 <!-- @if(activePartnerNames.length && activeList.length == 1){
   <div class="names-list">
@@ -15,13 +14,7 @@
   </div>
 } -->
 
-<!-- <div class="animate-section">
-  <div class="animate-div">
-    <img src="./assets/{{currentImage}}" alt="logo" />
-  </div>
-</div> -->
-
-<!-- @if(!animationComplete){
+@if(!animationComplete){
   <div class="animate-section" (click)="nextImage()">
     <div class="animate-div" [ngClass]="{'zoomInOut': isAnimating, 'zoomOut': isExiting}">
       @if(showImage){
@@ -29,6 +22,6 @@
       }
     </div>
   </div>
-} -->
+}
 
-<router-outlet></router-outlet>
+<div (click)="nextPage()" class="navigate-button">No Animation</div>

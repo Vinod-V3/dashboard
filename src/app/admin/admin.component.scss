@@ -1,0 +1,17 @@
+.admin-container{
+    max-width: 70vw;
+    margin: auto;
+    padding-top: 10%;
+
+    mat-label{
+        margin-bottom: 20px !important;
+    }
+
+    .save-button{
+        margin-top: 20px;
+    }
+
+    mat-form-field{
+        width: 100%;
+    }
+}

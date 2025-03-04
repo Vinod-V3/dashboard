@@ -1,4 +1,4 @@
-@if(optionsList.length){
+<!-- @if(optionsList.length){
     <div class="options-list">
         @for(option of optionsList; track $index){
           <div class="option">
@@ -6,4 +6,22 @@
           </div>
         }
     </div>
+} -->
+
+
+@if(dataList.length){
+  <div class="listing-section">
+    @for(option of dataList; track $index){
+      <div class="options-list {{option.type}}">
+      <div class="option-name" (click)= onOptionToggle(option)>{{ option.label }}</div>
+      @if(option.isShown){
+        <div @animationTrigger>
+          @for(data of option.data; track $index){
+            <div class="names" (click)="redirect(data)">{{ data.name }}</div>
+          }
+        </div>
+      }
+      </div>
+    }
+  </div>
 }

@@ -1,0 +1,21 @@
+<div class="admin-container">
+    <div>
+        <mat-form-field>
+            <mat-label>Map Zoom</mat-label>
+            <div style="margin-top: 16px;">
+                <input matInput (input)="onChange($event)" name="zoom" value="{{zoom}}" type="number">
+            </div>
+        </mat-form-field>
+    </div>
+
+    <mat-form-field>
+        <mat-label>Map data(JSON)</mat-label>
+        <div style="margin-top: 16px;">
+            <textarea matInput (input)="onMapDataChange($event)" rows="10" name="mapData" value="{{mapData}}"></textarea>
+        </div>
+    </mat-form-field>
+
+    <div class="save-button">
+        <button mat-raised-button (click)="save()">SAVE</button>
+    </div>
+</div>

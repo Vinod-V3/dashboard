@@ -1,0 +1,17 @@
+<div id="mapTwo"></div>
+<img src="./assets/images/shikshagraha-logo.png" alt="logo" class="logo" (click)="navigateToAdmin()"/>
+<div class="options-card">
+  <app-option-control-list [optionsList]="optionsList" (onOptionChange)="optionToggle($event)"></app-option-control-list>
+</div>
+
+<!-- @if(activePartnerNames.length && activeList.length == 1){
+  <div class="names-list">
+    <ul>
+      @for(partner of activePartnerNames; track $index){
+        <li (click)="redirect(partner)">{{ partner.name }}</li>
+      }
+    </ul>
+  </div>
+} -->
+
+<div (click)="goBack()" class="navigate-button">Show Animation</div>
