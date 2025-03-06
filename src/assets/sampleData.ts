@@ -7,7 +7,7 @@ export const mapData = {
       "website": "https://www.alohomora.org",
       "description": "Enable structured career exploration and informed choice for young people in govt schools in India at scale! By partnering with governments and credible NGOs, creating contextualized content, and building the capacity of teachers to facilitate our program.",
       "logo": "icons/alohomora.svg",
-      "hq_location": {"lat": 28.057103229473636, "lon": 77.00515453847237},
+      "hq_location": {"lat": 27.957103229473636, "lon": 77.10515453847237},
       "other_locations": [
         {
           "lat": 28.607119946716207, "lon": 76.65707816342436
@@ -76,7 +76,7 @@ export const mapData = {
       "website": "https://involveedu.com",
       "description": "",
       "logo": "icons/involve.svg",
-      "hq_location": {"lat": 12.738263728196413, "lon": 77.50003487120902},
+      "hq_location": {"lat": 13.338263728196413, "lon": 77.10003487120902},
 
       "other_locations": [
         {
@@ -92,7 +92,7 @@ export const mapData = {
           "lat": 24.887603624028152, "lon": 86.91979398455045
         },
         {
-          "lat": 13.435203256245693, "lon": 77.73248578974862
+          "lat": 13.535203256245693, "lon": 77.73248578974862
         },
         {
           "lat": 15.351158251170208, "lon": 76.15711985232375
@@ -107,7 +107,11 @@ export const mapData = {
       "description": "",
       "logo": "icons/jms.svg",
       "hq_location": {"lat": 26.12044479641395, "lon": 85.3911424184815},
-      "other_locations": []
+      "other_locations": [
+        {
+          "lat": 26.12044479641395, "lon": 85.3911424184815
+        }
+      ]
     },
     {
       "id": 8,
@@ -117,7 +121,11 @@ export const mapData = {
       "description": "",
       "logo": "icons/karunodaya.svg",
       "hq_location": {"lat": 24.79074998057475, "lon": 85.00754598254147},
-      "other_locations": []
+      "other_locations": [
+        {
+          "lat": 24.79074998057475, "lon": 85.00754598254147
+        }
+    ]
     },
     {
       "id": 9,
@@ -129,7 +137,7 @@ export const mapData = {
       "hq_location": {"lat": 13.009421010064898, "lon": 77.36820588230714},
       "other_locations": [
         {
-          "lat": 12.299564045230927, "lon": 76.64426856460032
+          "lat": 12.899564045230927, "lon": 76.64426856460032
         }
       ]
     },
@@ -140,10 +148,10 @@ export const mapData = {
       "website": "http://www.mantra4change.org/",
       "description": "",
       "logo": "icons/mantra.svg",
-      "hq_location": {"lat": 12.906153607589419, "lon": 77.88366692463399},
+      "hq_location": {"lat": 12.706153607589419, "lon": 77.48366692463399},
       "other_locations": [
         {
-          "lat": 13.176774757709865, "lon": 77.57852932448061
+          "lat": 13.376774757709865, "lon": 77.07852932448061
         },
         {
           "lat": 17.330807767016143, "lon": 76.83375928684656
@@ -158,7 +166,7 @@ export const mapData = {
           "lat": 16.21627254830264, "lon": 77.35698840976873
         },
         {
-          "lat": 12.807512570435915, "lon": 77.89621624080263
+          "lat": 13.197512570435915, "lon": 77.29621624080263
         },
         {
           "lat": 25.3369639865156, "lon": 91.76829641916132
@@ -220,7 +228,7 @@ export const mapData = {
       "website": "http://www.prajayatna.in/",
       "description": "",
       "logo": "icons/prajayatna.svg",
-      "hq_location": {"lat": 12.928585081475964, "lon": 77.57643893204043},
+      "hq_location": {"lat": 12.998585081475964, "lon": 77.17643893204043},
       "other_locations": [
         {
           "lat": 23.442233195378975, "lon": 84.68684339264328
@@ -251,7 +259,7 @@ export const mapData = {
       "website": "https://shikshalokam.org/",
       "description": "",
       "logo": "icons/sl.svg",
-      "hq_location": {"lat": 13.10638075881041, "lon": 77.28429312595403},
+      "hq_location": {"lat": 13.30638075881041, "lon": 77.99429312595403},
       "other_locations": [
         {
           "lat": 26.121831955385186, "lon": 85.39165740260628
@@ -276,7 +284,11 @@ export const mapData = {
       "description": "",
       "logo": "icons/sms.svg",
       "hq_location": {"lat": 26.515352248842575, "lon": 85.2943309671421},
-      "other_locations": []
+      "other_locations": [
+        {
+          "lat": 26.515352248842575, "lon": 85.2943309671421
+        }
+      ]
     },
     {
       "id": 19,
@@ -318,7 +330,7 @@ export const mapData = {
       "website": "https://www.ltts.com",
       "description": "",
       "logo": "icons/ltts.svg",
-      "hq_location": {"lat": 12.357519715439638, "lon": 76.59393024936759},
+      "hq_location": {"lat": 11.357519715439638, "lon": 75.59393024936759},
       "other_locations": []
     },
     {
@@ -338,7 +350,7 @@ export const mapData = {
       "website": "http://aws.amazon.com",
       "description": "",
       "logo": "icons/aws.svg",
-      "hq_location": {"lat": 27.55084200359278, "lon": 77.2505352538159},
+      "hq_location": {"lat": 28.45084200359278, "lon": 77.1005352538159},
       "other_locations": []
     },
     {
@@ -358,7 +370,7 @@ export const mapData = {
       "website": "https://www.rotaryqueensnecklace.org",
       "description": "",
       "logo": "icons/rotary.svg",
-      "hq_location": {"lat": 18.930369713387197, "lon": 72.82192848808987},
+      "hq_location": {"lat": 18.630369713387197, "lon": 72.92192848808987},
       "other_locations": []
     },
     {
@@ -368,7 +380,7 @@ export const mapData = {
       "website": "https://centreforexponentialchange.org",
       "description": "",
       "logo": "icons/c4ec.svg",
-      "hq_location": {"lat": 13.031281138592352, "lon": 77.82426479156386},
+      "hq_location": {"lat": 13.031281138592352, "lon": 77.92426479156386},
       "other_locations": []
     },
     {
@@ -408,7 +420,7 @@ export const mapData = {
       "website": "https://commutiny.in",
       "description": "",
       "logo": "icons/commutiny.svg",
-      "hq_location": {"lat": 28.841445937857354, "lon": 77.26219946243447},
+      "hq_location": {"lat": 28.641445937857354, "lon": 77.36219946243447},
       "other_locations": []
     },
     {
@@ -418,7 +430,7 @@ export const mapData = {
       "website": "https://www.piramalfoundation.org",
       "description": "",
       "logo": "icons/piramal.svg",
-      "hq_location": {"lat": 19.085891380809564, "lon": 72.88729262790613},
+      "hq_location": {"lat": 19.385891380809564, "lon": 73.29729262790613},
       "other_locations": []
     },
     {
@@ -448,7 +460,7 @@ export const mapData = {
       "website": "https://www.gnothiseauton.co",
       "description": "",
       "logo": "icons/gnothi.svg",
-      "hq_location": {"lat": 28.93163181070956, "lon": 77.00003448810583},
+      "hq_location": {"lat": 29.03163181070956, "lon": 76.98003448810583},
       "other_locations": []
     },
     {
@@ -557,6 +569,102 @@ export const mapData = {
       "from_id": 27,
       "to_id": 19,
       "to_location_id": 2,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 3,
+      "to_location_id": 1,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 10,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 10,
+      "to_location_id": 1,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 10,
+      "to_location_id": 2,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 10,
+      "to_location_id": 3,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 10,
+      "to_location_id": 4,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 10,
+      "to_location_id": 5,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 19,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 19,
+      "to_location_id": 1,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 23,
+      "to_id": 19,
+      "to_location_id": 2,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 16,
+      "to_id": 11,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 16,
+      "to_id": 11,
+      "to_location_id": 1,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 10,
+      "to_id": 8,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 16,
+      "to_id": 12,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 10,
+      "to_id": 7,
+      "to_location_id": 0,
+      "type": "strategic_to_momentum"
+    },
+    {
+      "from_id": 10,
+      "to_id": 18,
+      "to_location_id": 0,
       "type": "strategic_to_momentum"
     }
   ]
